@@ -39,6 +39,68 @@
     --smaller-font-size: .875rem;
   }
 }
+/* New live proj section */
+.work__container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.work__card {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.work__title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.work__details {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+}
+
+.work__button {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.work__card:hover {
+  background-color: #007bff;
+}
+
+.work__card:hover .work__title {
+  color: #fff;
+}
+
+.work__card.active .work__details {
+  display: block;
+  opacity: 1;
+}
 
 /*===== BASE =====*/
 *, ::before, ::after {
@@ -117,7 +179,7 @@ img {
 
 .work__card {
   background-color:  #202020; /* Black background for the card */
-  color: var(--first-color); /* White text */
+  color: hsl(0, 0%, 100%);; /* White text */
   text-decoration: none; /* Remove underline from links */
   padding: 1rem;
   border-radius: 0.5rem;
@@ -255,7 +317,7 @@ img {
 .home__social-icon {
   width: max-content;
   margin-bottom: var(--mb-2);
-  font-size: 1.5rem;
+  font-size: 3.5rem;
   color: var(--second-color);
 }
 .home__social-icon:hover {
@@ -306,7 +368,7 @@ img {
 /* ===== Experience =====*/
 .experience {
   background-color: #000000; /* Black background */
-  color: var(--first-color); /* Blue text color */
+  color:  #fff; /* Blue text color */
   padding: 40px 20px;
   border-radius: 12px;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
@@ -335,7 +397,7 @@ img {
 
 .experience__date {
   font-size: 14px;
-  color: #999999; /* Gray color for date */
+  color:  #fff; /* Gray color for date */
   margin-bottom: 10px;
 }
 
@@ -437,7 +499,7 @@ img {
 /* ===== Certifications =====*/
 .certifications {
   background-color: #000000; /* Black background */
-  color: #66a6ff; /* Blue text color */
+  color: #ffffff; /* Blue text color */
   padding: 40px 20px;
   border-radius: 12px;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
@@ -509,8 +571,8 @@ img {
 
 /* ===== FOOTER =====*/
 .footer {
-  background-color: var(--second-color);
-  color: #fff;
+  background-color: rgb(9,9,9);
+  color: rgb(255, 255, 255);
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
